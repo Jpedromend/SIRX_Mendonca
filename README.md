@@ -60,7 +60,8 @@ is conserved.
   - Load the JHU global time-series for confirmed, deaths, and recovered cases,
   - Aggregate by country,
   - Compute **Active = Confirmed − Deaths − Recovered**,
-  - Save the cleaned data and produce a sanity-check plot.
+  - Save the cleaned data,
+  - Plot active cases for checking.
 
 ---
 
