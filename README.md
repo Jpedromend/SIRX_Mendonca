@@ -12,7 +12,7 @@ The codes:
 - Integrate the nonlinear SIR-X equations,
 - Plot epidemic curves (e.g. active cases),
 - Process real COVID-19 data (Johns Hopkins University dataset) for comparison with the model,
-- Fits real data by estimating the best NL-SIRX parameters via MSE.
+- Fits real data by estimating the best NL-SIRX parameters via log-scale MSE.
 
 ---
 
@@ -63,12 +63,19 @@ is conserved.
   - Save the cleaned data,
   - Plot active cases for checking.
 
+- `fit_nlsirx.py`
+  - Loads processed country data,
+  - Fits both **Linear** and **Nonlinear** SIR-X models to the active cases using least-squares optimization,
+  - Compares the models via Normalized RMSE (per 100k population),
+  - Generates a comparative plot of the fits against real data.
+  > **Note on Reproducibility:** The fitting results are sensitive to user-defined inputs such as the start date and total population. Additionally, while the nonlinear model typically yields smaller errors, the optimization relies on randomized initial parameter guesses; consequently, generating multiple samples is recommended to avoid local minima and identify the global best fit.
 ---
 
 ## 3. Requirements
 
-- Python 3.x
-- [NumPy](https://numpy.org/)
-- [Pandas](https://pandas.pydata.org/)
-- [Matplotlib](https://matplotlib.org/)
-- [SciPy](https://scipy.org/)
+This code was developed and tested using **Python 3.x**, and the following libraries:
+
+- [NumPy](https://numpy.org/) (tested on v2.3.3)
+- [Pandas](https://pandas.pydata.org/) (tested on v2.3.3)
+- [Matplotlib](https://matplotlib.org/) (tested on v3.10.6)
+- [SciPy](https://scipy.org/) (tested on v1.16.2)
