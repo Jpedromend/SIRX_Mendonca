@@ -14,6 +14,9 @@ The codes:
 - Process real COVID-19 data (Johns Hopkins University dataset) for comparison with the model,
 - Fits real data by estimating the best NL-SIRX parameters via log-scale MSE.
 
+If you use this code in your research, please cite the associated manuscript:
+> Mendonça, J.P., Lira, S.A. & Lyra, M.L. Critical scaling and nonlinear adaptative containment responses in epidemic dynamics modeling. Eur. Phys. J. Spec. Top. (2025). https://doi.org/10.1140/epjs/s11734-025-02110-z
+
 ---
 
 ## 1. Model Overview
